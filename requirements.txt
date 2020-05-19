@@ -5,5 +5,5 @@ flask-restplus
 sqlalchemy
 psycopg2
 pandas
-numpy
 configparser
+werkzeug==0.16.1
