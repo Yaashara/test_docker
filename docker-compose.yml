@@ -1,0 +1,20 @@
+version: latest
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: admin
+      POSTGRES_DB: test_db
+  web:
+    build: .
+    command: 
+      - python /code/models.py
+      - python /code/execute.py
+    volumes:
+      - .:/code
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
