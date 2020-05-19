@@ -13,7 +13,3 @@ RUN pip install wergzeug==0.16.1
 COPY . /code
 
 RUN cp -a templates /code/venv/Lib/site-packages/flask
-
-
-
-
